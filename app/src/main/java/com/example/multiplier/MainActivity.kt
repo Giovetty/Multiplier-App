@@ -22,6 +22,19 @@ class MainActivity : AppCompatActivity() {
         val inputNumber1= findViewById<EditText>(R.id.InputNumber1)
         val answerText = findViewById<EditText>(R.id.answertext)
 
+        // Added code when calculate button is clicked
+        calculateButton.setOnClickListener {
+         var num1= inputNumber1.text.toString().toInt()
+
+        }
+        fun calculate(){
+            var num1= inputNumber1.text.toString().toInt()
+            var num2= inputNumber1.text.toString().toInt()
+            var result= num1*num2
+            answerText.text=result
+        }
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
